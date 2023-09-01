@@ -1,0 +1,21 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+{{ flatpage.title }}
+{% endblock title %}
+
+{% block content %}
+    <h2>{{ flatpage.title }}</h2>
+    <hr>
+    На одной из страниц контент повторяется 2 раза:<br><br>
+    {{ flatpage.content }} {{ flatpage.content }}<br><hr>
+    На одной из страниц изменены шрифты и размеры текста:<br><br>
+    Обычный:<br>
+    {{ flatpage.content }}<br><br>
+    Курсивный:<br>
+    <i>{{ flatpage.content }}</i><br><br>
+    Другой шрифт, рамер и жирный:<br>
+    <p><span style="font-family:Courier New,Courier,monospace">
+    <strong><span style="font-size:24px">{{ flatpage.content }}</span></strong></span></p><hr>
+    Одна из страниц на сайте доступна только вошедшему пользователю (и это она).<hr>
+{% endblock content %}
